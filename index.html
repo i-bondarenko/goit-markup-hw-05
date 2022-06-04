@@ -62,7 +62,7 @@
       <!--Большой банер-->
       <section class="banner">
         <h1 class="banner-title">ЭФФЕКТИВНЫЕ РЕШЕНИЯ ДЛЯ ВАШЕГО БИЗНЕСА</h1>
-        <button type="button" class="button primary">Заказать услугу</button>
+        <button type="button" data-modal-open class="button primary">Заказать услугу</button>
       </section>
 
       <!--Преимущества-->
@@ -448,5 +448,11 @@
         </div>
       </div>
     </footer>
+    <div class="backdrop is-hidden" data-modal>
+      <div class="modal">
+        <button data-modal-close>Закрыть</button>
+      </div>
+    </div>
+    <script src="./js/modal.js"></script>
   </body>
 </html>
