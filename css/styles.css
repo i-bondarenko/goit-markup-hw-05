@@ -7,6 +7,7 @@
   --team-section-background-color: #f5f4fa;
   --footer-background-color: #2f303a;
   --footer-contacts: rgba(255, 255, 255, 0.6);
+  --timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 body {
   color: var(--main-text-color);
@@ -533,6 +534,7 @@ footer {
   height: 581px;
   background-color: var(--second-accent-color);
 }
+
 /* Портфолио */
 
 .filter {
@@ -560,6 +562,7 @@ footer {
   display: block;
   text-decoration: none;
   color: inherit;
+  transition: box-shadow 250ms var(--timing-function);
 }
 .project-link:hover,
 .project-link:focus {
@@ -585,11 +588,16 @@ footer {
   margin-top: 0;
   margin-bottom: 0;
   font-size: 18px;
+  transform: translateY(101%);
+  transition: transform 250ms var(--timing-function);
   line-height: 1.56;
   color: var(--second-accent-color);
   background-color: rgba(33, 150, 243, 0.9);
 }
-
+.project-link:hover .project-thumb .text,
+.project-link:focus .project-thumb .text {
+  transform: translateY(101%);
+}
 .about-project {
   padding: 20px 24px;
   border-right: 1px solid #eeeeee;
